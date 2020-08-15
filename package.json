@@ -7,7 +7,7 @@
     "build": "npm run test && npm run build:prod",
     "build:prod": "cross-env NODE_ENV=production npx rollup -c",
     "build:dev": "cross-env NODE_ENV=development npx rollup -c",
-    "test": "cross-env npx doctest cleanup && npx doctest build ./src/*.js && npx jest --transformIgnorePatterns=[] && npx doctest cleanup"
+    "test": "cross-env npx doctest cleanup && npx doctest build ./src/*.js && npx jest && npx doctest cleanup"
   },
   "repository": "github:axtk/complex",
   "keywords": [
