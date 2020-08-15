@@ -2,26 +2,24 @@ import EPSILON from './EPSILON';
 import equal from './equal';
 import stringify from './stringify';
 
-// > new ComplexNumber(0, 1)
-// IM_1
-// > new ComplexNumber(2.1)
-// new ComplexNumber(2.1, 0)
-// > new ComplexNumber([2.3, -8.7])
-// new ComplexNumber(2.3, -8.7)
-// > new ComplexNumber('-2.1')
-// new ComplexNumber(-2.1, 0)
-// > new ComplexNumber('test')
-// new ComplexNumber(NaN, NaN)
+// @test expect(new ComplexNumber(2.1)).toStrictEqual(new ComplexNumber(2.1, 0));
+// @test expect(new ComplexNumber([2.3, -8.7])).toStrictEqual(new ComplexNumber(2.3, -8.7));
+// @test expect(new ComplexNumber('-2.1')).toStrictEqual(new ComplexNumber(-2.1, 0));
+// @test expect(new ComplexNumber('test')).toStrictEqual(new ComplexNumber(NaN, NaN));
 
-// > new ComplexNumber(0, 1).equals(IM_1)
-// true
-// > RE_1.equals(new ComplexNumber(1, 0))
-// true
-// > RE_1.equals(new ComplexNumber(1, .001))
-// false
+// @test
+// import IM_1 from './IM_1';
+// expect(new ComplexNumber(0, 1).equals(IM_1)).toBe(true);
 
-// > +new ComplexNumber(1)
-// 1
+// @test
+// import RE_1 from './RE_1';
+// expect(RE_1.equals(new ComplexNumber(1, 0))).toBe(true);
+
+// @test
+// import RE_1 from './RE_1';
+// expect(RE_1.equals(new ComplexNumber(1, .001))).toBe(false);
+
+// @test expect(+new ComplexNumber(1)).toEqual(1);
 
 export default class ComplexNumber {
     constructor(re, im) {

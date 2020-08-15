@@ -1,13 +1,10 @@
 import ComplexNumber from './ComplexNumber';
 
-// > isWellFormed(new ComplexNumber(-6.54, 32.1))
-// true
-// > isWellFormed(new ComplexNumber('-1.23'))
-// true
-// > isWellFormed(new ComplexNumber([2.3, -8.7]))
-// true
-// > isWellFormed(new ComplexNumber('test'))
-// false
+// @test expect(isWellFormed(new ComplexNumber(-6.54, 32.1))).toBe(true);
+// @test expect(isWellFormed(new ComplexNumber('-1.23'))).toBe(true);
+// @test expect(isWellFormed(new ComplexNumber([2.3, -8.7]))).toBe(true);
+// @test expect(isWellFormed(new ComplexNumber('test'))).toBe(false);
+
 export default function isWellFormed(z) {
     return (
         z instanceof ComplexNumber &&

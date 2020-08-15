@@ -1,7 +1,9 @@
 import toArray from './toArray';
 
-// > stringify(new ComplexNumber(1.23, -4.56))
-// '[1.23,-4.56]'
+// @test
+// import ComplexNumber from './ComplexNumber';
+// expect(stringify(new ComplexNumber(1.23, -4.56))).toEqual('[1.23,-4.56]');
+
 export default function stringify(z) {
     return JSON.stringify(toArray(z));
 }
